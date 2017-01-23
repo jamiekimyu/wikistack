@@ -23,7 +23,8 @@ router.post('/', function(req, res, next){
   });
 
      page.save().then(function(page){
-         res.redirect(page.route);
+         //res.redirect(page.route);
+         res.json(page);
      });
      
 })
@@ -32,6 +33,16 @@ router.get('/add', function(req, res, next){
     res.render('addpage');
 })
 
-router.get('/:pageTitle', function(req, res, next){
-    res.send('new page');
-})
+router.get('/:urlTitle', function (req, res, next) {
+
+  Page.findOne({ 
+    where: { 
+      urlTitle: req.params.urlTitle 
+    } 
+  })
+  .then(function(foundPage){
+    res.json(foundPage);
+  })
+  .catch(next);
+
+});
