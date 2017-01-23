@@ -8,7 +8,7 @@ var Page = db.define('page', {
     },
     urlTitle: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: false,
     },
     content: {
         type: Sequelize.TEXT,
@@ -21,6 +21,10 @@ var Page = db.define('page', {
         type: Sequelize.DATE,
         defaultValue: Sequelize.NOW
     }
+}, {
+    getterMethods: {
+    route: function()  { return '/wiki/' + this.urlTitle }
+  }
 });
 
 var User = db.define('user', {

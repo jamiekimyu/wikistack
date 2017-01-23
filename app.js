@@ -21,3 +21,7 @@ models.User.sync({})
     });
 })
 .catch(console.error);
+
+var makeRouter = require('./routes/wiki.js');
+
+app.use('/wiki', makeRouter);
