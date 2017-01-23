@@ -10,6 +10,7 @@ var env = nunjucks.configure('./views', {noCache: true});
 app.set('view engine', 'html');
 app.engine('html', nunjucks.render);
 
+var server = app.listen(9001);
 
 models.User.sync({})
 .then(function () {
