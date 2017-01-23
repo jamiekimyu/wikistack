@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon -e html,js,css /Users/jason/Documents/Immersive/wikistack/app.js"
-},
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jamiekimyu/wikistack.git"
@@ -22,7 +22,10 @@
     "express": "^4.14.0",
     "morgan": "^1.7.0",
     "nodemon": "^1.11.0",
-    "nunjucks": "^3.0.0"
+    "nunjucks": "^3.0.0",
+    "pg": "^6.1.2",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^3.29.0"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
