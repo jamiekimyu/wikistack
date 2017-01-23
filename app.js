@@ -25,4 +25,7 @@ models.User.sync({})
 
 var makeRouter = require('./routes/wiki.js');
 
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(morgan('dev'));
 app.use('/wiki', makeRouter);
