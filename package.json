@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-    "start": "nodemon -e html,js,css /Users/jason/Documents/Immersive/wikistack/app.js
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon -e html,js,css /Users/jason/Documents/Immersive/wikistack/app.js"
 },
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jamiekimyu/wikistack.git"
